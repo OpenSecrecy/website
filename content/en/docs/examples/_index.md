@@ -1,10 +1,25 @@
 ---
 title: Examples
 weight: 3
-date: 2017-01-05
-description: See your project in action!
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use EncryptedSecrets and Cryptctl.
-{{% /pageinfo %}}
+### **Create an encryption key**
+
+```bash 
+cryptctl init -n <namespace> -p k8s
+```
+![cryptctl init](img/cryptctl-init.png)
+
+### **Create an encrypted-secret manifest**
+
+```bash
+cryptctl create -f demo.yaml -p k8s
+```
+![cryptctl create](img/cryptctl-create.png)
+
+### **Edit encrypted-secrets manifest to add secret**
+    
+```bash
+cryptctl edit demo.yaml
+```
+![cryptctl edit](img/cryptctl-edit.gif)
