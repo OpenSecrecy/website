@@ -54,6 +54,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
+      - name: Install postcss-cli
+        run: npm install -g postcss-cli
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
